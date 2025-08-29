@@ -1,0 +1,22 @@
+chainlit: 2.0.0
+
+ui:
+name: "Chatbot"
+description: "A simple chatbot powered by google's Gemini model"
+
+default_expand_message: true
+
+
+auth:
+  required: true 
+  provider: 
+    -github
+    -google
+
+  oauth providers:
+    github:
+      client_id: ${OAUTH_GITHUB_CLIENT_ID}
+      client_secret: ${OAUTH_GITHUB_CLIENT_SECRET}
+    google:
+      client_id: ${OAUTH_GOOGLE_CLIENT_ID}
+      client_secret: ${OAUTH_GOOGLE_CLIENT_SECRET}
