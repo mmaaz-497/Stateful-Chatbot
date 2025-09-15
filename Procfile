@@ -1,1 +1,1 @@
-web: chainlit run main.py --port $PORT --host 0.0.0.0
+web: chainlit run main.py --host 0.0.0.0 --port $PORT --no-cache --headless
